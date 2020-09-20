@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DMS", "DMS\DMS.csproj", "{520AE15D-EF22-4D93-A4FF-9A6EC7EB6E7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADD", "ADD\ADD.csproj", "{446B7632-667C-45B7-8A4A-6F7FDDE386F5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{C9D9C88E-7A41-4F13-9112-4EA74B151245}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolPanel", "ToolPanel\ToolPanel.csproj", "{86D4A591-35BA-4C0D-B9A1-29C320C445B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLiteLoggin", "SQLiteLoggin\SQLiteLoggin.csproj", "{4295DDAC-F2C1-4A98-92B2-25A21DEDD553}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolComboBox", "ToolComboBox\ToolComboBox.csproj", "{5EF02594-DC3F-4E84-B8E4-5448490662E2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TSQLtoCS", "WpfApp1\TSQLtoCS.csproj", "{C27D5EEB-2D3F-47BF-8CD1-6BF2FF5608DA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{520AE15D-EF22-4D93-A4FF-9A6EC7EB6E7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{520AE15D-EF22-4D93-A4FF-9A6EC7EB6E7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{520AE15D-EF22-4D93-A4FF-9A6EC7EB6E7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{520AE15D-EF22-4D93-A4FF-9A6EC7EB6E7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{446B7632-667C-45B7-8A4A-6F7FDDE386F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{446B7632-667C-45B7-8A4A-6F7FDDE386F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{446B7632-667C-45B7-8A4A-6F7FDDE386F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{446B7632-667C-45B7-8A4A-6F7FDDE386F5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9D9C88E-7A41-4F13-9112-4EA74B151245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9D9C88E-7A41-4F13-9112-4EA74B151245}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9D9C88E-7A41-4F13-9112-4EA74B151245}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9D9C88E-7A41-4F13-9112-4EA74B151245}.Release|Any CPU.Build.0 = Release|Any CPU
+		{86D4A591-35BA-4C0D-B9A1-29C320C445B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{86D4A591-35BA-4C0D-B9A1-29C320C445B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{86D4A591-35BA-4C0D-B9A1-29C320C445B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{86D4A591-35BA-4C0D-B9A1-29C320C445B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4295DDAC-F2C1-4A98-92B2-25A21DEDD553}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4295DDAC-F2C1-4A98-92B2-25A21DEDD553}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4295DDAC-F2C1-4A98-92B2-25A21DEDD553}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4295DDAC-F2C1-4A98-92B2-25A21DEDD553}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EF02594-DC3F-4E84-B8E4-5448490662E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EF02594-DC3F-4E84-B8E4-5448490662E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EF02594-DC3F-4E84-B8E4-5448490662E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EF02594-DC3F-4E84-B8E4-5448490662E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C27D5EEB-2D3F-47BF-8CD1-6BF2FF5608DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C27D5EEB-2D3F-47BF-8CD1-6BF2FF5608DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C27D5EEB-2D3F-47BF-8CD1-6BF2FF5608DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C27D5EEB-2D3F-47BF-8CD1-6BF2FF5608DA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D9763D07-AC03-4E92-844C-8F5DE261209A}
+	EndGlobalSection
+EndGlobal

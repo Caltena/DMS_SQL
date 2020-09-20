@@ -1,0 +1,181 @@
+﻿<Window x:Class="DMS.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:Fluent="clr-namespace:Fluent;assembly=Fluent"
+        xmlns:avalonDock="http://schemas.xceed.com/wpf/xaml/avalondock"
+        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+        xmlns:local="clr-namespace:DMS"
+        mc:Ignorable="d"
+        WindowStyle="SingleBorderWindow"
+        Title="Documenten Managment System" Height="650" Width="1000"     
+        >
+
+
+    <Grid x:Name="layoutRoot">
+        <Grid.RowDefinitions>
+            <!-- -->
+            <RowDefinition Height="Auto" />
+            <!-- -->
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <!-- -->
+        <Fluent:Ribbon Grid.Row="0" Background="#FF444343" >
+            <!--Backstage-->
+            <Fluent:Ribbon.Menu>
+                <Fluent:Backstage>
+                    <Fluent:BackstageTabControl>
+                        <Fluent:BackstageTabItem Header="{DynamicResource BTI_New}" />
+                        <Fluent:BackstageTabItem Header="{DynamicResource BTI_Print}" />
+                        <Fluent:SeparatorTabItem/>
+                        <Fluent:Button 
+                            Header="{DynamicResource BTI_Exit}" 
+                            Click="DMS_Exit"/>
+                    </Fluent:BackstageTabControl>
+                </Fluent:Backstage>
+            </Fluent:Ribbon.Menu>
+            <!--Stamm-->
+            <Fluent:RibbonTabItem Header="{DynamicResource BTI_Contact}">
+                <Fluent:RibbonGroupBox Header="{DynamicResource BTG_Contact}" Foreground="AntiqueWhite" Width="120">
+                    <Fluent:Button Name="ContacSearch" 
+                                   Foreground="AntiqueWhite"
+                                   Header="{DynamicResource BTI_Search}"
+                                   Icon="pack://application:,,,/DMS;component/Images/user.png"
+                                   LargeIcon="pack://application:,,,/DMS;component/Images/user.png"
+                                   Width="60"
+                                   Click="CmdShow_ContactSearch"
+                                   />
+
+                    <Fluent:Button Name="ContactNew" 
+                                   Foreground="AntiqueWhite"
+                                   Header="{DynamicResource BTI_Add}"  
+                                   Width="60"
+                                   Icon="pack://application:,,,/DMS;component/Images/userPlus.png"
+                                   LargeIcon="pack://application:,,,/DMS;component/Images/userPlus.png"
+                                   Click="CmdShow_ContactNew"
+                                   />
+                </Fluent:RibbonGroupBox>
+                <Fluent:RibbonGroupBox Header="{DynamicResource BTI_DMS}" Foreground="AntiqueWhite" Height="94" Width="120">
+                    <Fluent:Button Name="buttonGreen1" 
+                                   Foreground="AntiqueWhite"
+                                   Header="{DynamicResource BTI_Search}" 
+                                   Icon="pack://application:,,,/DMS;component/Images/book.png"
+                                   LargeIcon="pack://application:,,,/DMS;component/Images/book.png"  Width="60"
+                                   />
+
+                    <Fluent:Button Name="buttonGray1" 
+                                   Foreground="AntiqueWhite"
+                                   Header="{DynamicResource BTI_Add}"                                   
+                                   Icon="pack://application:,,,/DMS;component/Images/bookPlus.png"
+                                   LargeIcon="pack://application:,,,/DMS;component/Images/bookPlus.png" Width="60"
+                                   />
+                </Fluent:RibbonGroupBox>
+            </Fluent:RibbonTabItem>
+
+            <!--Sonstiges-->
+            <Fluent:RibbonTabItem Header="Home">
+                <Fluent:RibbonGroupBox Header="Group">
+                    <Fluent:Button Name="Address" 
+                                   Foreground="AntiqueWhite"
+                                   Header="Address"  
+                                   Width="60"
+                                   Icon="pack://application:,,,/DMS;component/Images/group.png"
+                                   LargeIcon="pack://application:,,,/DMS;component/Images/group.png"
+                                   />
+                    <Fluent:Button Name="Mail" 
+                                   Foreground="AntiqueWhite"
+                                   Header="Mail"  
+                                   Width="60"
+                                   Icon="pack://application:,,,/DMS;component/Images/mail.png"
+                                   LargeIcon="pack://application:,,,/DMS;component/Images/mail.png"
+                                   Click="CmdShow_Mail"
+                                   />
+                </Fluent:RibbonGroupBox>
+            </Fluent:RibbonTabItem>
+        </Fluent:Ribbon>
+        <!-- -->
+        <avalonDock:DockingManager
+            x:Name="dockManager"
+            Grid.Row="1"
+            AllowMixedOrientation="True"
+            DocumentClosing="dockManager_DocumentClosing">
+            <avalonDock:DockingManager.Theme>
+                <avalonDock:Vs2013DarkTheme />
+            </avalonDock:DockingManager.Theme>
+
+            <avalonDock:DockingManager.DocumentHeaderTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <!--<Image Margin="0,0,4,0" Source="{Binding IconSource}" />-->
+                        <TextBlock Text="{Binding Title}" TextTrimming="CharacterEllipsis" />
+                    </StackPanel>
+                </DataTemplate>
+            </avalonDock:DockingManager.DocumentHeaderTemplate>
+
+            <avalonDock:LayoutRoot PropertyChanged="OnLayoutRootPropertyChanged">
+                <avalonDock:LayoutPanel Orientation="Horizontal">
+
+                    <!--
+                        ***  LayoutAnchorablePane          LayoutAnchorable         ***
+                        *** +++++++++++++++++++++++++++++++++++++++++++++++++++++++ ***
+                    -->
+                    <avalonDock:LayoutAnchorablePane DockWidth="250">
+                        <avalonDock:LayoutAnchorable 
+                            x:Name="WinFormsWindow"
+                            Title="Tool"
+                            CanClose="True"
+                            CanHide="False"       
+                            ContentId="WinFormsWindow"
+                            ToolTip="My WinForms Tool">
+                            <Grid>
+                                <TextBox x:Name="stextBox" 
+                                         HorizontalAlignment="Left" 
+                                         Height="23" Margin="10,10,0,0" 
+                                         Text="{Binding stextBox, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                                         VerticalAlignment="Top" Width="120"/>
+
+                            </Grid>
+
+                        </avalonDock:LayoutAnchorable>
+                    </avalonDock:LayoutAnchorablePane>
+
+                    <!--
+                        *** LayoutDocumentPaneGroup        LayoutDocumentPane       ***
+                        *** ++++++++++++++++++++++++++++++++++++++++++++++++++++++  ***
+                    -->
+                    <avalonDock:LayoutDocumentPaneGroup  DockMinWidth="250" >
+                        <avalonDock:LayoutDocumentPane x:Name="LayoutDocument_Pane" >
+
+                        </avalonDock:LayoutDocumentPane>
+                    </avalonDock:LayoutDocumentPaneGroup>
+
+                    <!--
+                        ***  LayoutAnchorablePaneGroup     LayoutAnchorablePane     ***
+                        *** +++++++++++++++++++++++++++++++++++++++++++++++++++++++ ***
+                    -->
+                    <avalonDock:LayoutAnchorablePaneGroup DockMinWidth="250">
+                        <avalonDock:LayoutAnchorablePane x:Name="LayoutAnchorable_Pane" >
+                        </avalonDock:LayoutAnchorablePane>
+                    </avalonDock:LayoutAnchorablePaneGroup>
+                    <!-- -->
+                </avalonDock:LayoutPanel>
+
+                <!--
+                    ***  LayoutRoot.LeftSide     LayoutAnchorablePane               ***
+                    *** ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ ***
+                -->
+                <avalonDock:LayoutRoot.LeftSide>
+                    <avalonDock:LayoutAnchorSide x:Name="LayoutAnchorable_Side" >
+
+                        <avalonDock:LayoutAnchorGroup >
+                        </avalonDock:LayoutAnchorGroup>
+                    </avalonDock:LayoutAnchorSide>
+                </avalonDock:LayoutRoot.LeftSide>
+
+            </avalonDock:LayoutRoot>
+        </avalonDock:DockingManager>
+
+        <!-- -->
+    </Grid>
+</Window>

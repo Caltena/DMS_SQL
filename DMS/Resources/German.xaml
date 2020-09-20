@@ -1,0 +1,48 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:local="clr-namespace:DMS"
+                    xmlns:system="clr-namespace:System;assembly=mscorlib">
+
+
+    <!-- *************************************************
+         Globale 
+         *************************************************  -->
+    <system:String x:Key="Contact">Stammdaten</system:String>
+    <system:String x:Key="ToolWindows">Werkzeuge</system:String>
+
+    <!-- *************************************************
+         Stammdaten
+         *************************************************  -->
+    <system:String x:Key="Name">Name</system:String>
+    <system:String x:Key="ID">ID</system:String>
+    <system:String x:Key="Street">Strasse</system:String>
+    <system:String x:Key="City">Ort</system:String>
+    <system:String x:Key="Mail">Email</system:String>
+    <system:String x:Key="Search">Suchen</system:String>
+    <!-- *************************************************
+         Menu
+         *************************************************  -->
+    <system:String x:Key="BTI_New">Neu</system:String>
+    <system:String x:Key="BTI_Print">Drucken</system:String>
+    <system:String x:Key="BTI_Exit">Beenden</system:String>
+    <system:String x:Key="BTI_Contact">Stammdaten</system:String>
+    <system:String x:Key="BTI_DMS">Dokumente</system:String>
+
+    <system:String x:Key="BTI_Search">Suche</system:String>
+    <system:String x:Key="BTI_Add">Neu</system:String>
+    <system:String x:Key="BTG_Contact">Gruppe</system:String>
+
+
+    <system:String x:Key="TP_Search">Suche</system:String>
+    <system:String x:Key="TP_List">Listen</system:String>
+    <system:String x:Key="TP_Find">Bearbeiten</system:String>
+    <system:String x:Key="TP_Printer">Drucken</system:String>
+    <system:String x:Key="TP_Import">Importieren u. Scannen</system:String>
+    <system:String x:Key="TP_Mail">EMail</system:String>
+    <system:String x:Key="TP_Undo">Undo</system:String>
+    <system:String x:Key="TP_Delete">Löschen</system:String>
+    <system:String x:Key="TP_Save">Speichern</system:String>
+
+
+
+</ResourceDictionary>
